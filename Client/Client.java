@@ -4,6 +4,7 @@ import java.io.*;
 public class Client {
     public static void main(String args[])throws Exception{
         Socket s=new Socket("localhost",3334);
+        System.out.println("connected to server");
         DataInputStream din=new DataInputStream(s.getInputStream());
         DataOutputStream dout=new DataOutputStream(s.getOutputStream());
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
